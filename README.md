@@ -8,7 +8,7 @@ Thankfully, this wrapper class built on top of path provider will help make your
 ## How To
 #### Read From File
 To read from a local file, instantiate a SADFile with the file name.
-The read() method returns avlue in async.
+The read() method returns value in async.
 ```
   SADFile file = SADFile(filename: "settings.json");
   String settings = "";
