@@ -1,4 +1,4 @@
-# Smoke-a-Dart
+# Smoke-a-Dart (SAD)
 
 Smoke-a-Dart is a tool for organizing and managing your files in Dart.
 
