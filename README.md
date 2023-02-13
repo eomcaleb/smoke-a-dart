@@ -6,15 +6,36 @@ We've all been there. Using a path_provider in Dart can be quite tedious.
 Thankfully, this wrapper class built on top of path provider will help make your development easier.
 
 ## How To
-Screenshots to follow
+#### Read From File
+To read from a local file, instantiate a SADFile with the file name.
+The read() method returns avlue in async.
+```
+  SADFile file = SADFile(filename: "settings.json");
+  String settings = "";
+  
+  Future<void> GetResources() async {
+    await file.read().then((value) {
+      setState(() {
+        settings = value;
+      });
+    });
+  }
+```
+
+#### Write To File
+Deomonstration of how to save a text to a file.
+```
+  const setting = [ {"style": "darkmode"} ];
+  SADFile file = SADFile(filename: "settings.json");
+  file.write(jsonEncode(setting));
+```
 
 ## Features
-* Read Files
-* Write JSON
-* Write Raw Text
+* Read from Local Storage
+* Write to Local Storage
 
 ## Requirements
-* Path_Provider
+* path_provider: ^2.0.11
 
 ## Usage
 Simply drop in this .dart file into your existing project directory for your development needs.
